@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download or update Workshop Stack
+    url: https://steamcommunity.com/sharedfiles/filedetails/?id=3798094543
+    about: Get the mod from Steam Workshop. Report problems using the GitHub forms above.
+  - name: Optional development support on Patreon
+    url: https://www.patreon.com/DejaBOOMcya
+    about: Support development and view available membership benefits. Bug reports and feature requests stay free on GitHub.
