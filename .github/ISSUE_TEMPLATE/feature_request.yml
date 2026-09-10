@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest an improvement to Workshop Stack.
+title: "[Feature] "
+labels: [enhancement, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Feature requests are open to everyone. Search existing requests and add your use case to a matching issue. Suggestions and Patreon support do not guarantee implementation or a delivery date.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you are trying to do and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the improvement and what a successful result would look like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Include current workarounds, screenshots, or relevant mod links. Do not attach third-party source code or binaries.
