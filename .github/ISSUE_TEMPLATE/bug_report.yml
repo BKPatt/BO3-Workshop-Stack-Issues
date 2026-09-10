@@ -1,5 +1,5 @@
-name: Bug or mod compatibility problem
-description: Report a reproducible problem with Workshop Stack or a mod combination.
+name: Bug, crash, or mod incompatibility
+description: Report a bug, crash, freeze, or incompatible mod combination. Please include bo3_stack.log.
 title: "[Bug] "
 labels: [bug, needs-triage]
 body:
@@ -7,7 +7,8 @@ body:
     attributes:
       value: |
         Search existing issues first. Reports are free; Patreon is optional.
-        Share reports here rather than in Steam Workshop comments. Never attach game/mod binaries, memory dumps, credentials, or payment information.
+        Share reports here rather than in Steam Workshop comments. Bug, crash, freeze, and incompatibility reports should include **bo3_stack.log from the failing session**.
+        Never attach game/mod binaries, memory dumps, credentials, or payment information.
   - type: input
     id: stack-version
     attributes:
@@ -46,8 +47,27 @@ body:
     attributes:
       label: Smallest reproduction tested
       description: What happens with Workshop Stack alone, each mod separately, or the smallest conflicting pair? Say if you could not test these.
+  - type: markdown
+    attributes:
+      value: |
+        ### Find and attach your log
+        1. If practical, reproduce the problem once, then close BO3 before copying the log.
+        2. In the Steam library where BO3 is installed, open `steamapps/workshop/content/311210/3798094543/bo3_stack.log`.
+        3. Click the log field below and drag the file into it, or use its attachment button. Upload the log itself, not a screenshot of the log. If GitHub rejects `.log`, attach a copy renamed `bo3_stack.txt` or a ZIP containing only the log.
+
+        The log appends across sessions. Prefer the complete file when manageable; if it is too large, attach the complete failing session from its startup/initialization lines through the final error. Include the approximate time the failure happened.
+
+        Review the copy for personal Windows usernames, private paths, IP addresses, and other personal information before uploading. Keep the mod IDs, load order, error messages, and diagnostic lines intact. If no log was created, you cannot find it, or upload fails, explain that below so you can still report the problem.
   - type: textarea
     id: evidence
     attributes:
-      label: Log excerpt and screenshots
-      description: Attach the relevant failing-session excerpt from steamapps/workshop/content/311210/3798094543/bo3_stack.log. Redact personal usernames, private paths, IP addresses, and other personal information. Include an error screenshot when useful.
+      label: bo3_stack.log — attach the file or explain why it is unavailable
+      description: Required for bug, crash, freeze, and incompatibility reports. Drag your log into this field, paste the relevant failing-session text, or explain why you cannot provide it.
+      placeholder: "Attach bo3_stack.log here and note the failure time. If unavailable, explain what happened and where you looked."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or other context (optional)
+      description: An error screenshot or short video can help, but does not replace the log.
