@@ -1,0 +1,29 @@
+name: Setup or troubleshooting help
+description: Ask for help with setup, load order, or a problem you cannot yet reproduce.
+title: "[Help] "
+labels: [support, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the README quick start first. If you can reproduce a bug, use the bug-report form.
+        Support requests belong here, not Workshop comments. If your Patreon tier includes focused help, privately send this issue's link through Patreon; keep membership/payment details out of the public issue.
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe your goal, the step where you are stuck, the exact error (if any), and what you have tried.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Version, applied load order, and setup
+      description: Include Workshop Stack version, numbered mod links/IDs, map, game build/language, and T7 version/load order (or none).
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional log excerpt or screenshot
+      description: Redact personal usernames, private paths, IP addresses, and other personal information. Do not upload game/mod files, executables, DLLs, memory dumps, or credentials.
