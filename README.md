@@ -30,7 +30,9 @@ Mod **1** has the highest priority for duplicate gameplay-mod assets. The **last
 
 Include the Workshop Stack version, exact error, steps to reproduce, every mod/map Workshop link, the **numbered applied load order**, language, game build, and whether you use T7 or another native patch. For compatibility issues, try the smallest pair that reproduces the problem when practical.
 
-The loader log is `steamapps/workshop/content/311210/3798094543/bo3_stack.log`. Attach a relevant excerpt from the failing session and an error screenshot if useful. Remove personal Windows usernames, private paths, IP addresses, and other personal information first. Do not upload game files, downloaded mods, executables, DLLs, memory dumps, credentials, or payment information.
+**Bug, crash, freeze, and incompatibility reports should include `bo3_stack.log`.** Find it in the Steam library where BO3 is installed, under `steamapps/workshop/content/311210/3798094543/bo3_stack.log`. If practical, reproduce the failure once, close BO3, and attach a copy by dragging it into the bug form's required log field. If `.log` is rejected, rename the copy to `bo3_stack.txt` or ZIP only the log. Include the approximate failure time. Prefer the complete file; for a large log, include the complete failing session from its startup/initialization lines through the final error. An error screenshot is helpful extra context, but does not replace the log.
+
+If the log was not created, cannot be found, or cannot be uploaded, explain why in that field; you can still file the report. Remove personal Windows usernames, private paths, IP addresses, and other personal information from the copy while keeping mod IDs, load order, errors, and diagnostic lines intact. Do not upload game files, downloaded mods, executables, DLLs, memory dumps, credentials, or payment information.
 
 ## Current scope
 
