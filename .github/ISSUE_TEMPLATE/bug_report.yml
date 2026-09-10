@@ -1,0 +1,53 @@
+name: Bug or mod compatibility problem
+description: Report a reproducible problem with Workshop Stack or a mod combination.
+title: "[Bug] "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Reports are free; Patreon is optional.
+        Share reports here rather than in Steam Workshop comments. Never attach game/mod binaries, memory dumps, credentials, or payment information.
+  - type: input
+    id: stack-version
+    attributes:
+      label: Workshop Stack version
+      description: Use the version from bo3_stack.log, and mention if it is a local test build.
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What happened, and how can it be reproduced?
+      description: Include the exact error, steps, expected behavior, and the point that failed (activation, Apply, map load, gameplay, or exit).
+    validations:
+      required: true
+  - type: textarea
+    id: load-order
+    attributes:
+      label: Applied load order and map
+      description: List every gameplay mod in the numbered order shown by Loaded Mods, with Workshop links or IDs. Include the map separately.
+      placeholder: |
+        1. Mod name — Workshop link/ID
+        2. Mod name — Workshop link/ID
+        Map: name — stock or Workshop link/ID
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Game and native-patch setup
+      description: Include Steam build, language, Windows version, T7 version (or none), other native patches, launch order, and solo/private/co-op mode. Downpatched executables are unsupported.
+    validations:
+      required: true
+  - type: textarea
+    id: isolation
+    attributes:
+      label: Smallest reproduction tested
+      description: What happens with Workshop Stack alone, each mod separately, or the smallest conflicting pair? Say if you could not test these.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Log excerpt and screenshots
+      description: Attach the relevant failing-session excerpt from steamapps/workshop/content/311210/3798094543/bo3_stack.log. Redact personal usernames, private paths, IP addresses, and other personal information. Include an error screenshot when useful.
