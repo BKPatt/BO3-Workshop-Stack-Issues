@@ -1,0 +1,10 @@
+Workshop Stack 1.1.1 — game update compatibility
+
+- Restores support after the BO3 update to Steam build 24784313.
+- Keeps the previous build 21201493 supported for players who downpatch for old T7. Future updates will preserve previously supported game builds.
+- Uses separate verified native profiles for both executables while preserving executable-hash checks, hook validation, compatible T7 patch reuse, and owned patch rollback.
+- Retains all 1.1.0 editor, load-order, streaming, precache, capacity, T7, and localized startup improvements.
+
+The compatibility fix passed brief solo/private Nacht Revamped + Ultimis gameplay checks on the updated game without T7 and on the previous game with Scroptss T7 v3.04 started first. Old T7 on the updated game remains unverified.
+
+Close BO3 and let Steam download the update, then activate Workshop Stack in MODS and confirm READY.

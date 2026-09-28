@@ -1,0 +1,5 @@
+#pragma once
+#include <string_view>
+namespace selection_editor {
+inline constexpr std::string_view frontend_source=R"stackui(@STACK_FRONTEND_LUA@)stackui";
+}

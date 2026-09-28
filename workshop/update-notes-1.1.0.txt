@@ -1,0 +1,35 @@
+[b]1.1.0 — Selection editor, load order, T7 and compatibility fixes[/b]
+
+This update includes all changes since the original 1.0.0 Workshop release.
+
+[b]New selection workflow[/b]
+[list]
+[*]Add and remove individual mods without a reload after every selection.
+[*]Reorder the draft stack with Move Up / Move Down, Q / E, or controller LB / RB.
+[*]Apply the entire batch once with Apply Changes (F / Y). Reset, Cancel, and staged Clear All make it easier to revise the selection.
+[*]Replace the last-loaded-mod label with a clickable Loaded Mods prompt. Press L / right stick to view the applied order in menus and lobbies. The prompt and viewer are hidden during gameplay.
+[*]Remove the four-mod selection cap. BO3's remaining zone, asset, memory, and menu limits still apply.
+[/list]
+
+[b]Loading and compatibility[/b]
+[list]
+[*]Preserve recognized compatible T7 native patches and roll back only patches owned by Workshop Stack. Fix the reproduced late-attachment crash for the recognized Scroptss T7 v3.04 layout at the main menu.
+[*]Include all 12 localized startup fastfiles, fixing missing-language startup files such as es_core_mod.ff and bp_core_mod.ff.
+[*]Show clearer errors for unsupported game builds, changed hooks, DLL loading, and initialization failures.
+[*]Expand package plans and temporary conversion buffers for larger stacks; grow supported raw-file and compiled-script header pools on demand.
+[*]Fix secondary mods' XPAK identities, streaming iterator state, and asynchronous sound-bank routing.
+[*]Combine and deduplicate shared precache lists so character mods cannot hide another mod's weapon-registration requests.
+[*]Give the first gameplay mod priority for duplicate mod assets across core and Zombies loading phases. Restore earlier Zombies packages when the last selected mod contains only core content.
+[*]Preserve both inspected Nacht Revamped and Ultimis startup routines using a compatibility adapter guarded by the tested script fingerprints.
+[*]Improve script-error/precache diagnostics and regression coverage.
+[/list]
+
+[b]Updated instructions[/b]
+Load Workshop Stack from MODS, confirm READY, then reopen MODS. Build and reorder your stack, and apply once. Put your highest-priority gameplay mod first; saved mod options follow the last gameplay mod (the editor's settings profile). Press L / right stick in a menu or lobby to inspect the active order. The main Workshop description now replaces the old selection and compatibility instructions.
+
+Start T7 before BO3 for the recommended startup sequence. Downpatched executables and alternative clients remain unsupported. Compatibility with arbitrary mod combinations, co-op synchronization, and long sessions is not guaranteed.
+
+[b]Reports and community[/b]
+[url=https://github.com/BKPatt/BO3-Workshop-Stack-Issues/issues/new/choose]Use GitHub for bugs, feature requests, and setup help[/url], rather than Workshop comments. Please include mod/map links, applied load order, your game/T7 setup, reproduction steps, and relevant logs. Reporting and feature requests are free; the repository is an issue tracker with no mod source code.
+
+[url=https://www.patreon.com/DejaBOOMcya]Optional Patreon support[/url] now offers $3 Supporter, $8 Feature Input, and $20 Focused Bug Support (five places). Extra attention is best effort as development time allows, without deadlines, quotas, or guaranteed fixes. Workshop comments remain open for discussion and feedback.

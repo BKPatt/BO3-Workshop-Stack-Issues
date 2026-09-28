@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.spec
+profiles.json
+*.log
+research/
+native/third_party/minhook/.git/

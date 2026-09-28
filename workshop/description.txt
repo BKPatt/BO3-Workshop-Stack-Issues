@@ -1,0 +1,51 @@
+[h1]BO3 Workshop Stack (Experimental) — 1.1.1[/h1]
+Load and manage multiple subscribed Black Ops III Workshop mods from BO3's MODS menu. No separate launcher is needed.
+
+[b]Bugs, feature requests, and setup help: [url=https://github.com/BKPatt/BO3-Workshop-Stack-Issues/issues/new/choose]open a GitHub issue[/url]. Please use GitHub instead of Workshop comments for reports so they can be tracked.[/b]
+[url=https://www.patreon.com/DejaBOOMcya]Optional monthly support on Patreon[/url] helps with development and testing. Reporting bugs and requesting features stay free. Workshop comments remain open for discussion and feedback.
+
+[h2]What's new in 1.1.1[/h2]
+Restores Workshop Stack after the game update to Steam build 24784313. The previous build 21201493 remains supported for people who downpatch for old T7. Each build uses its own verified native profile, with executable and hook checks preserved. Future game updates will keep previously supported builds available.
+
+Includes the 1.1.0 selection editor, individual removal and reordering, one Apply transition, and Loaded Mods viewer in menus and lobbies, plus streaming, shared precache, T7, capacity, and localized startup fixes.
+
+[h2]How to use[/h2]
+[olist]
+[*]Subscribe to Workshop Stack and each gameplay mod you want. Wait for Steam to finish downloading.
+[*]Start BO3 through Steam. Open [b]MODS[/b] at the main menu and load [b]BO3 Workshop Stack[/b]. Confirm [b]READY[/b].
+[*]Reopen MODS. Click a mod or press [b]Enter / A[/b] to add or remove it. Your draft stays in the editor without reloading.
+[*]Use [b]Left / Right[/b] to switch panes. In the numbered load order, use [b]Q / E[/b], controller [b]LB / RB[/b], or [b]Move Up / Move Down[/b] to reorder.
+[*]Choose [b]Apply Changes[/b] or press [b]F / Y[/b] when finished. BO3 reloads once for the whole batch. [b]Reset Changes[/b] restores the active stack; [b]Cancel / Back[/b] discards edits. [b]Clear All (U / left stick)[/b] is staged until you apply.
+[*]In the main menu or a lobby, press [b]L / right stick[/b] or click the top-right [b]LOADED MODS[/b] prompt to see the active stack in order. The panel shows applied changes only. It and its prompt are hidden during gameplay.
+[*]Choose your Zombies map normally and start a private game. Activate the loader and select your stack again after restarting BO3.
+[/olist]
+
+[h2]Load order and settings[/h2]
+[b]Put your highest-priority gameplay mod first.[/b] Item 1 wins duplicate mod asset definitions over item 2, then item 3, including across core and Zombies loading phases. The numbered LOAD ORDER pane and LOADED MODS panel show this order.
+
+Mod-specific saved options use the [b]last gameplay mod[/b] in the applied order, shown as the editor's settings profile. For COLDWAR HEALTH BAR with TF Options, put TF last. Shared precache requests are combined where supported; conflicting scripts, weapons, rules, and HUDs are not universally mergeable.
+
+There is no fixed loader selection cap, and Workshop Stack itself is not a gameplay slot. BO3's zone, asset, memory, and MODS-menu limits still apply. More RAM does not make conflicting mods compatible.
+
+[h2]T7 and compatibility[/h2]
+Supports the exact Windows x64 Steam executables from builds [b]24784313[/b] and [b]21201493[/b]. Support for 21201493 is retained for people who downpatch for old T7. Future build support is added alongside existing supported builds. Unknown executable hashes and alternative clients are unsupported. The loader checks the executable and hook bytes before applying native changes; it does not modify the game executable on disk.
+
+The tested Scroptss T7 v3.04 setup uses game build [b]21201493[/b]: [b]start T7 before BO3 and wait for its version to appear before activating Workshop Stack[/b]. Recognized compatible patches are preserved. The reproduced late-attachment crash for that T7 layout at the main menu is also fixed. Old T7 on build 24784313 and starting T7 during a match are unverified; other versions need separate testing.
+
+Includes fixes for secondary-mod XPAK and sound-bank routing, combined precache lists, and the inspected startup conflict between [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3596966808]Nacht Revamped[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3543204459]TameCoot's Ultimis[/url]. That startup adapter only applies to the tested script versions. These fixes do not guarantee every character, voice, weapon combination, or long session. Mods using the shared HUDInject convention also have a compatibility adapter.
+
+[b]Experimental, primarily tested in solo/private Zombies.[/b] Co-op stack synchronization, matchmaking, campaign, multiplayer, and long-session stability remain unverified. Other creators' mods are not bundled; subscribe to their original items.
+
+[h2]Get help or support development[/h2]
+[url=https://github.com/BKPatt/BO3-Workshop-Stack-Issues/issues/new/choose][b]GitHub: bug reports, feature requests, and setup help[/b][/url]
+Search existing issues first. Include your mod/map Workshop links, exact applied load order, game language/build, T7 version and startup order, reproduction steps, and the specific error. The loader log is [b]bo3_stack.log[/b] inside [b]steamapps/workshop/content/311210/3798094543[/b]. For combination failures, try to find the smallest stack that reproduces the problem. Remove personal information before attaching logs. The tracker contains no mod source code.
+
+[url=https://www.patreon.com/DejaBOOMcya][b]Patreon: optional monthly support[/b][/url]
+Supporter ($3), Feature Input ($8), and Focused Bug Support ($20, limited to five members). Higher tiers offer extra input and troubleshooting attention when development time allows. This is a hobby project: no response deadlines, monthly work quotas, guaranteed fixes, or commissioned development. Open reports on GitHub first; focused-support members can then privately send their issue link through Patreon.
+
+[b]Please keep issue reports on GitHub, rather than in Workshop comments. Comments are welcome for discussion and feedback.[/b]
+
+[h2]Credits[/h2]
+Lua build support: L3akMod by the D3V Team (DTZxPorter, SE2Dev, Nukem).
+Native hooking library: MinHook by Tsuda Kageyu and contributors.
+Additional notices and licenses are included with the mod.

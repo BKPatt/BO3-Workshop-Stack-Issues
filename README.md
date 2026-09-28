@@ -1,10 +1,24 @@
 # BO3 Workshop Stack — issues and feature requests
 
-This is the public issue tracker for **BO3 Workshop Stack (Experimental)** by DejaBOOMcya. It contains support documentation and issue templates only. The mod's source code, game files, and binaries are not hosted here.
+This is the public issue tracker for **BO3 Workshop Stack (Experimental)** by DejaBOOMcya. It also hosts the mod's source code as of version 1.1.1 (MIT licensed). Game files, downloaded mods and binaries are not hosted here.
 
 - **Download / update:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3798094543)
 - **Report a bug, request a feature, or ask for help:** [Open an issue](https://github.com/BKPatt/BO3-Workshop-Stack-Issues/issues/new/choose)
 - **Support development:** [Patreon](https://www.patreon.com/DejaBOOMcya)
+
+## Source code — 1.1.1
+
+This repository contains the Workshop Stack source for the published 1.1.1 release: the native extension (`native/`), the Workshop Lua and zone sources (`workshop/`), build and diagnostic scripts (`dev/`) and the legacy launcher. See [SOURCE_README.md](SOURCE_README.md) for the full project description and [LICENSE](LICENSE) / [THIRD_PARTY.md](THIRD_PARTY.md) for notices. Later development is not included.
+
+Build on Windows with CMake 3.20+, Visual Studio 2022 C++ Build Tools and a Windows SDK:
+
+```powershell
+cmake -S native -B native/build -G "Visual Studio 17 2022" -A x64
+cmake --build native/build --config Release
+ctest --test-dir native/build -C Release --output-on-failure
+```
+
+`dev/build-workshop.ps1` builds a local Workshop folder with BO3 Mod Tools; it never uploads anything. A fresh build uses publisher ID `0`, so publishing it creates your own new Workshop item. Please don't republish this mod under its name; link to the official Workshop item instead.
 
 ## Latest release — 1.1.1
 
